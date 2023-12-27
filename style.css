@@ -2,6 +2,8 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
 }
 
 body {
@@ -10,8 +12,6 @@ body {
     background: url(bg.jpg) no-repeat center center/cover;
     align-items: center;
     justify-content:center;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-
 }
 
 .container {
@@ -26,7 +26,3 @@ body {
     color: aliceblue;
 }
 
-.button {
-    /* width: 20px; */
-    /* height: 20px; */
-}
