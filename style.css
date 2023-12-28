@@ -18,14 +18,15 @@ body {
 .container {
     width: 50%;
     height: 300px;
-    background-color: #009160;
+    background-color: #ffffff;
     border-radius: 15px;
-    color: aliceblue;
 }
 
 #timer {
+    width: 100%;
     text-align: center;
     font-size: 75px;
+    margin: 0px auto;
     padding: 25px;
 }
 
@@ -35,10 +36,13 @@ body {
 }
 
 button{
+    margin: 0 10px;
     background-color: black;
     border: none;
 }
 
 button i {
     font-size: 24px;
+    padding: 10px;
+    /* color: black; */
 }
