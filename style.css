@@ -10,6 +10,7 @@ body {
     height: 100vh;
     background-color: brown;
     background: url(bg.jpg) no-repeat center center/cover;
+    display: flex;
     align-items: center;
     justify-content:center;
 }
@@ -17,12 +18,27 @@ body {
 .container {
     width: 50%;
     height: 300px;
-    background-color: #024e35;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content:center;
-    font-size: 75px;
+    background-color: #009160;
+    border-radius: 15px;
     color: aliceblue;
 }
 
+#timer {
+    text-align: center;
+    font-size: 75px;
+    padding: 25px;
+}
+
+.buttons {
+    text-align: center;
+
+}
+
+button{
+    background-color: black;
+    border: none;
+}
+
+button i {
+    font-size: 24px;
+}
