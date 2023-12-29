@@ -1,14 +1,22 @@
 
 
-// Variables
+// Variables for buttons
 const startBtn = document.querySelector('#startBtn')
 const restBtn = document.querySelector('#resetBtn')
 
+
+// Variables for time values
 let seconds = 0;
 let minutes = 0;
 let hours = 0;
 
 
+// Variables for leadin zeros
+let leadingSeconds = 0;
+let leadingMinutes = 0;
+let leadingHours = 0;
+
+// Stopwatch function
 function stopWatch() {
     seconds++;
     if (seconds/60 === 1) {
@@ -23,8 +31,27 @@ function stopWatch() {
 
     }
 
-    let displayTimer = document.querySelector('#timer').innerText = hours + ':' + minutes + ':' + seconds;
+    if (seconds < 10) {
+        leadingSeconds = "0" + seconds.toString();
+    } else {
+        leadingSeconds = seconds;
+    }
+
+    if (minutes < 10) {
+        leadingMinutes = "0" + minutes.toString();
+    } else {
+        leadingMinutes = minutes;
+    }
+
+    if (hours < 10) {
+        leadingHours = "0" + hours.toString();
+    } else {
+        leadingHours = hours;
+    }
+
+    let displayTimer = document.querySelector('#timer').innerText = leadingHours + ':' + leadingMinutes + ':' + leadingSeconds;
 
 }
 
 window.setInterval(stopWatch, 1000);
+// window.setInterval(stopWatch, 1); // stopwatch is faster
