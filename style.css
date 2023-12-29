@@ -32,7 +32,7 @@ body {
 
 .buttons {
     text-align: center;
-    margin-top: 10px;
+    margin-top: 30px;
 }
 
 button{
@@ -41,11 +41,14 @@ button{
 }
 
 button i {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     padding: 10px;
     color: #ffffff;
 }
 
+hr{
+    border: 1px solid orange;
+}
 #play {
     background-color: green;
 }
