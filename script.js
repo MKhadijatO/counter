@@ -16,6 +16,10 @@ let leadingSeconds = 0;
 let leadingMinutes = 0;
 let leadingHours = 0;
 
+// Variables for setInterval and timerstatus
+let timerInterval = null;
+let timerStatus = "stopped";
+
 // Stopwatch function
 function stopWatch() {
     seconds++;
@@ -53,5 +57,28 @@ function stopWatch() {
 
 }
 
-window.setInterval(stopWatch, 1000);
+
 // window.setInterval(stopWatch, 1); // stopwatch is faster
+
+startBtn.addEventListener('click', function () {
+    if (timerStatus === "stopped") {
+        timerInterval = window.setInterval(stopWatch, 1000);
+        document.getElementById('startBtn').innerHTML = `<i class="fas fa-solid fa-pause" id="pause"></i>`;
+        timerStatus = "started";
+    }else {
+        window.clearInterval(timerInterval);
+        document.getElementById('startBtn').innerHTML = `<i class="fas fa-solid fa-play" id="play"></i>`;
+        timerStatus = "stopped";
+    }
+
+});
+
+restBtn.addEventListener('click', function () {
+
+    window.clearInterval(timerInterval);
+    seconds = 0;
+    minutes = 0;
+    hours = 0;
+
+    document.getElementById('timerBtn').innerHTML.innerHTML = "00:00:00";
+})
